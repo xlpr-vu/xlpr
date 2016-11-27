@@ -1,0 +1,15 @@
+applications:
+- path: javaCloudantWorkloadSchedulerApp.war
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  name: xlpr
+  host: xlpr
+  disk_quota: 1024M
+  services:
+  - retrieve-and-rank-service
+  - document-conversion-service
+  - conversation-service
+  - xlpr-cloudantNoSQLDB
+  - xlpr-WorkloadScheduler
+  - availability-monitoring-auto
